@@ -1,5 +1,6 @@
 name: hashing_methods_dart
-description: A simple command-line application to analyze the performance of different hashing methods in Dart
+description: A simple command-line application to analyze the performance of
+  different hashing methods in Dart
 version: 1.0.0
 
 environment:
@@ -8,4 +9,5 @@ environment:
 dev_dependencies:
   pedantic: ^1.9.0
 dependencies:
+  archive: ^3.1.2
   crypto: ^3.0.1

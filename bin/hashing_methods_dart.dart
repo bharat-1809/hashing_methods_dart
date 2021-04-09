@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:archive/archive.dart';
 import 'package:crypto/crypto.dart';
 import 'raw_string.dart';
 
@@ -7,11 +8,12 @@ void main(List<String> arguments) {
 
   /// hashing methods to test
   var hashMethods = [
+    Crc32(),
+    Adler32(),
     md5,
     sha1,
     sha224,
     sha256,
-    sha384,
     sha384,
     sha512,
     sha512224,
@@ -20,11 +22,12 @@ void main(List<String> arguments) {
 
   /// Used for ease in printing hash method name
   var hashNames = [
+    'crc32',
+    'adler32',
     'md5',
     'sha1',
     'sha224',
     'sha256',
-    'sha384',
     'sha384',
     'sha512',
     'sha512/224',
