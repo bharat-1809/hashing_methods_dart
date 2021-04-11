@@ -17,4 +17,6 @@ The experiment was performed on a list of open source licenses. Time taken to ha
         - sha512/224 --> 0.55 ms
         - sha512/256 --> 0.548 ms
 
-After seeing the observations we can say that `md5` hashing method is the fastest in case of Dart
+After seeing the observations we can say that `adler32` hashing method is the fastest, however its [collision rate](https://rsaxvc.net/blog/2016/2/7/Graphical_Analysis_of_Collision_Rates_of_Various_CRCs.html) is much higher than `crc32`.
+
+So for generating non-cryptographic hashes `crc32` algorithm would be an ideal choice. 
